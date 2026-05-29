@@ -1,7 +1,6 @@
 # open-dataroom
 
 [![Built by Grona](https://img.shields.io/badge/built_by-Grona-054B3A?style=flat-square)](https://grona.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Pluggable LLM](https://img.shields.io/badge/LLM-Gemini%20%7C%20OpenAI%20%7C%20Claude-7B61FF?style=flat-square)]()
 
 **Built by [Grona](https://grona.ai) — and shared as MIT for any founder, fund, or operator who needs an investor data room they can host themselves.**

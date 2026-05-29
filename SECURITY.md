@@ -4,9 +4,13 @@
 
 ## Reporting a vulnerability
 
-Please email **security@example.com** (or whatever address you wire your fork to) with a description of the issue, a proof of concept where possible, and the affected commit SHA. Do **not** open a public GitHub issue for security reports.
+Open a private advisory through GitHub's built-in flow: visit the **Security** tab of this repository and click **Report a vulnerability**. Anyone with a GitHub account can file one; the conversation stays private with the maintainers — no email back-and-forth, no separate account to manage.
+
+[**→ Report a vulnerability**](../../security/advisories/new)
 
 We aim to acknowledge reports within **7 days** and to land a fix or a documented mitigation within **30 days** for high-severity findings. We will credit reporters in the release notes unless asked not to. There is no formal bug bounty programme.
+
+**Forking this template?** Enable Private Vulnerability Reporting on your fork: Settings → Code security and analysis → "Privately report a vulnerability" → Enable. Without it, the Report button doesn't render and would-be reporters fall back to opening a public issue (which leaks the bug).
 
 ## Scope
 
