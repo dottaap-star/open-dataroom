@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1E3A8A;
+      --amber: #FBBF24;
+      --white: #FAFAFC;
+      --ink: #111118;
+      --muted: #5B6BA0;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      width: 1200px; height: 630px;
+      background: var(--white);
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      color: var(--ink);
+    }
+    body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Left: deep navy with lighthouse beam */
+    .left {
+      background: linear-gradient(180deg, #1E3A8A 0%, #0F1E50 100%);
+      color: var(--white);
+      padding: 64px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .left::before {
+      /* Soft amber beam */
+      content: "";
+      position: absolute;
+      top: -10%; left: 35%;
+      width: 90%; height: 200%;
+      background: radial-gradient(ellipse at top left, rgba(251,191,36,0.22) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .mark {
+      display: flex; align-items: center; gap: 14px;
+      font-weight: 700; font-size: 22px; letter-spacing: -0.01em;
+      position: relative;
+    }
+    .tower {
+      width: 28px; height: 36px; position: relative;
+    }
+    .tower::before {
+      content: ""; position: absolute; left: 4px; top: 10px;
+      width: 20px; height: 26px; background: var(--white); border-radius: 2px;
+    }
+    .tower::after {
+      content: ""; position: absolute; left: 2px; top: 0;
+      width: 24px; height: 14px; background: var(--white); clip-path: polygon(20% 100%, 80% 100%, 80% 30%, 50% 0, 20% 30%);
+    }
+    .colophon {
+      font-size: 14px; color: var(--amber); font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      position: relative;
+    }
+    h1 {
+      font-weight: 800; font-size: 64px; line-height: 1.05; margin: 0;
+      letter-spacing: -0.02em;
+      position: relative;
+    }
+    /* Right: white with confidence statement */
+    .right {
+      background: var(--white);
+      padding: 64px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .label {
+      font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--navy); font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .pitch {
+      font-size: 38px; font-weight: 600; line-height: 1.2; letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0 0 36px 0;
+    }
+    .meta {
+      display: flex; flex-direction: column; gap: 12px;
+      font-size: 15px; color: #4A4A55; line-height: 1.5;
+    }
+    .meta .row { display: flex; gap: 12px; align-items: baseline; }
+    .meta .key { font-weight: 600; min-width: 84px; color: var(--ink); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .meta .val { font-size: 16px; }
+    .ask { font-weight: 700; color: var(--navy); font-size: 17px; }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <div class="mark">
+      <div class="tower"></div>
+      <span>Lighthouse Labs</span>
+    </div>
+    <h1>1 founder.<br/>1 product.<br/>1 conviction.</h1>
+    <div class="colophon">Investor data room · v1</div>
+  </div>
+
+  <div class="right">
+    <div class="label">The Ask</div>
+    <p class="pitch">A small round to remove a constraint, not chase a bigger story.</p>
+    <div class="meta">
+      <div class="row"><div class="key">Stage</div><div class="val ask">Pre-seed · SAFE</div></div>
+      <div class="row"><div class="key">Raise</div><div class="val ask">$1M @ $10M post</div></div>
+      <div class="row"><div class="key">Use</div><div class="val">18 months runway · one senior hire</div></div>
+      <div class="row"><div class="key">Closing</div><div class="val">Within 90 days · 5 soft-circled</div></div>
+    </div>
+  </div>
+</body>
+</html>

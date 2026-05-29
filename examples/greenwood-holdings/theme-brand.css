@@ -1,0 +1,43 @@
+/*
+ * THE BRAND COLOUR RAMP — your single edit surface for the visual identity.
+ *
+ * Current palette: GREENWOOD HOLDINGS — dusty navy + brass, mid-century-
+ * Penguin-Classics-paperback meets boutique-fund-letterhead. Replace the
+ * values below to re-skin the entire UI without touching any component.
+ */
+
+@theme {
+    /* Brand ramp — dusty navy (LP-letterhead primary) */
+    --color-brand-25:  rgb(247 250 253);
+    --color-brand-50:  rgb(238 244 251);
+    --color-brand-100: rgb(214 228 244);
+    --color-brand-200: rgb(184 207 232);
+    --color-brand-300: rgb(143 178 213);
+    --color-brand-400: rgb( 99 142 189);
+    --color-brand-500: rgb( 60 105 159);
+    --color-brand-600: rgb( 41  80 130);
+    --color-brand-700: rgb( 30  58  95);   /* #1E3A5F — the Greenwood navy */
+    --color-brand-800: rgb( 22  43  72);
+    --color-brand-900: rgb( 15  30  52);
+    --color-brand-950: rgb(  9  18  32);
+
+    /* Accent — brass, used for letterhead rules + premium ornaments */
+    --color-accent-25:  rgb(252 250 244);
+    --color-accent-50:  rgb(248 243 230);
+    --color-accent-100: rgb(240 229 200);
+    --color-accent-200: rgb(228 211 161);
+    --color-accent-300: rgb(213 187 122);
+    --color-accent-400: rgb(201 169 110);   /* #C9A96E — the Greenwood brass */
+    --color-accent-500: rgb(184 145  79);
+    --color-accent-600: rgb(155 119  62);
+    --color-accent-700: rgb(122  93  48);
+    --color-accent-800: rgb( 92  70  35);
+    --color-accent-900: rgb( 67  51  25);
+
+    /* Paper — blush-warm cream, slightly pinker than Acme */
+    --color-paper-cream: rgb(244 236 226);   /* page background */
+    --color-paper-warm:  rgb(237 226 211);   /* sidebar tint */
+    --color-paper-card:  rgb(252 248 240);   /* card surfaces */
+    --color-paper-ink:   rgb( 21  31  46);   /* near-navy "ink" */
+    --color-paper-rule:  rgb(220 207 188);   /* hairline rules */
+}

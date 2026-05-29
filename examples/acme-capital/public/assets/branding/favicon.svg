@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Acme Capital">
+  <rect width="64" height="64" rx="12" fill="#B45309"/>
+  <text x="32" y="46" font-family="IBM Plex Serif, Roboto Slab, Georgia, serif" font-weight="700" font-size="40" fill="#FAF7F0" text-anchor="middle" letter-spacing="-1">A</text>
+  <circle cx="50" cy="14" r="4" fill="#F59E0B"/>
+</svg>

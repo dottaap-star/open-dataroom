@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Lighthouse Labs">
+  <rect width="64" height="64" rx="12" fill="#1E3A8A"/>
+  <g transform="translate(32, 38)">
+    <rect x="-7" y="-2" width="14" height="20" rx="1.5" fill="#FAFAFC"/>
+    <rect x="-9" y="-12" width="18" height="10" rx="1.5" fill="#FAFAFC"/>
+    <polygon points="-9,-12 9,-12 0,-23" fill="#FAFAFC"/>
+    <circle cx="14" cy="-8" r="3" fill="#FBBF24"/>
+  </g>
+</svg>

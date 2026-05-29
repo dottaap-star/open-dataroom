@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #B45309;
+      --mustard: #F59E0B;
+      --cream: #FAF7F0;
+      --ink: #1F1F1F;
+      --rule: #E8E0CF;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      width: 1200px; height: 630px;
+      background: var(--cream);
+      font-family: 'IBM Plex Serif', Georgia, serif;
+      color: var(--ink);
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      padding: 64px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Background grain — overlapping diagonal stripes evoke industrial-catalogue paper */
+    body::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(135deg, transparent 0 12px, rgba(180,83,9,0.025) 12px 13px);
+      pointer-events: none;
+    }
+    /* Top rule */
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 3px solid var(--ink);
+    }
+    .mark {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .star { color: var(--orange); font-size: 38px; line-height: 1; }
+    .brand {
+      font-weight: 700; font-size: 28px; letter-spacing: 0.04em;
+    }
+    .meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px; letter-spacing: 0.22em; color: #6B4A20;
+      text-transform: uppercase;
+    }
+    /* Centre block */
+    main {
+      flex: 1;
+      display: flex; flex-direction: column; justify-content: center;
+      max-width: 880px;
+    }
+    h1 {
+      font-size: 76px; line-height: 1.05; margin: 0 0 28px 0;
+      font-weight: 700; letter-spacing: -0.015em;
+    }
+    h1 em {
+      font-style: italic; color: var(--orange);
+    }
+    .lede {
+      font-size: 22px; line-height: 1.45; color: #4A3A20;
+      max-width: 760px;
+    }
+    /* Bottom rule */
+    .footer {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      padding-top: 22px;
+      border-top: 1px solid var(--rule);
+    }
+    .footer .left { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #6B4A20; text-transform: uppercase; }
+    .stamp {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 2px solid var(--orange);
+      color: var(--orange);
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500; font-size: 12px;
+      letter-spacing: 0.32em; text-transform: uppercase;
+      transform: rotate(-1.5deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="mark">
+      <span class="star">★</span>
+      <span class="brand">ACME CAPITAL</span>
+    </div>
+    <span class="meta">EST. 1948 · INDUSTRIAL CATALOGUE</span>
+  </div>
+
+  <main>
+    <h1>Anvils. Dynamite.<br />Rocket skates.<br /><em>At SaaS margins.</em></h1>
+    <p class="lede">A confidential investor data room for serious operators considering exposure to the explosive-adjacent industrial-implements category. We have a catalog. We have a cohort. We have a chairwoman who has seen things.</p>
+  </main>
+
+  <div class="footer">
+    <div class="left">Investor data room · By invitation only</div>
+    <div class="stamp">Confidential</div>
+  </div>
+</body>
+</html>

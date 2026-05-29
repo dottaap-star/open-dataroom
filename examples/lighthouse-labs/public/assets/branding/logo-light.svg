@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" role="img" aria-label="Lighthouse Labs">
+  <defs>
+    <style>
+      .wordmark { font-family: 'Inter', -apple-system, system-ui, sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+      .strap    { font-family: 'Inter', -apple-system, system-ui, sans-serif; font-weight: 500; letter-spacing: 0.04em; }
+    </style>
+  </defs>
+  <!-- Lighthouse glyph: simple tower + beam triangle -->
+  <g transform="translate(22, 40)">
+    <!-- tower base -->
+    <rect x="-7" y="-2" width="14" height="20" rx="1" fill="#1E3A8A"/>
+    <!-- tower lantern -->
+    <rect x="-9" y="-12" width="18" height="10" rx="1" fill="#1E3A8A"/>
+    <!-- top cap -->
+    <polygon points="-9,-12 9,-12 0,-22" fill="#1E3A8A"/>
+    <!-- amber beam (faded triangle) -->
+    <polygon points="9,-7 32,-15 32,1" fill="#FBBF24" opacity="0.55"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="60" y="44" class="wordmark" font-size="26" fill="#111118">Lighthouse Labs</text>
+  <!-- Strapline -->
+  <text x="60" y="62" class="strap" font-size="11" fill="#5B6BA0">A single product, shipped late at night.</text>
+</svg>

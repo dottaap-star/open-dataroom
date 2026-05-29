@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" role="img" aria-label="Acme Capital">
+  <defs>
+    <style>
+      .stamp { font-family: 'IBM Plex Serif', 'Roboto Slab', Georgia, serif; font-weight: 700; letter-spacing: 0.04em; }
+      .meta  { font-family: 'IBM Plex Mono', 'Roboto Mono', monospace; font-weight: 500; letter-spacing: 0.2em; }
+    </style>
+  </defs>
+  <g transform="translate(20, 32)">
+    <polygon points="0,-14 4.1,-4.3 14.6,-3.3 6.6,4.0 8.5,14.3 0,8.7 -8.5,14.3 -6.6,4.0 -14.6,-3.3 -4.1,-4.3"
+             fill="#F59E0B"/>
+    <polygon points="0,-7 2.1,-2.2 7.4,-1.7 3.4,2.0 4.3,7.2 0,4.4 -4.3,7.2 -3.4,2.0 -7.4,-1.7 -2.1,-2.2"
+             fill="#1F1F1F"/>
+  </g>
+  <text x="48" y="42" class="stamp" font-size="28" fill="#FAF7F0">ACME CAPITAL</text>
+  <text x="48" y="60" class="meta" font-size="9" fill="#F59E0B">EST. 1948 — INDUSTRIAL CATALOGUE</text>
+</svg>

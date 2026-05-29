@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1E3A5F;
+      --brass: #C9A96E;
+      --cream: #F4ECE2;
+      --ink: #151F2E;
+      --rule: #DCCFBC;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      width: 1200px; height: 630px;
+      background: var(--cream);
+      font-family: 'EB Garamond', Georgia, serif;
+      color: var(--ink);
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 64px 80px;
+      position: relative;
+      text-align: center;
+    }
+    /* Inner double-rule border (Penguin Classics treatment) */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border: 1px solid var(--brass);
+    }
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 32px;
+      border: 1px solid var(--brass);
+      opacity: 0.5;
+    }
+    .stack { position: relative; z-index: 1; }
+    /* Top bar with ornaments */
+    .topbar {
+      display: flex; align-items: center; justify-content: center; gap: 22px;
+      font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase;
+      color: #5C4623;
+      margin-top: 28px;
+    }
+    .topbar .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brass); }
+    /* Title */
+    main {
+      flex: 1;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      max-width: 880px;
+    }
+    .roman {
+      font-size: 16px;
+      letter-spacing: 0.35em;
+      color: #5C4623;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 96px;
+      line-height: 1.0;
+      margin: 0;
+      color: var(--navy);
+    }
+    .lede {
+      font-size: 22px;
+      line-height: 1.6;
+      color: #2A3A50;
+      margin-top: 36px;
+      max-width: 760px;
+    }
+    /* Bottom bar */
+    .footer {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      width: 100%;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #5C4623;
+      margin-bottom: 16px;
+    }
+    .colophon {
+      font-style: italic;
+      font-size: 14px;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--brass);
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar stack">
+    <span>Penguin Edition</span>
+    <span class="dot"></span>
+    <span>Greenwood Holdings</span>
+    <span class="dot"></span>
+    <span>Volume I</span>
+  </div>
+
+  <main class="stack">
+    <div class="roman">— Volume I —</div>
+    <h1>An exceedingly<br />small fund.</h1>
+    <p class="lede">
+      Heritage assets · property of consequence · the occasional thing in oak. <br />
+      Diligence conducted in the symmetry it deserves.
+    </p>
+  </main>
+
+  <div class="footer stack">
+    <span>Investor Letterhead · Limited Partners</span>
+    <span class="colophon">Confidential — for the eyes of named LPs only</span>
+    <span>MMXVI</span>
+  </div>
+</body>
+</html>
