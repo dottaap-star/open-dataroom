@@ -1,0 +1,81 @@
+{
+    "name": "open-dataroom",
+    "version": "0.1.0",
+    "description": "Open-source investor data room template — Next.js + MongoDB + Google Drive + RAG-powered AI chatbot.",
+    "license": "MIT",
+    "author": "open-dataroom contributors",
+    "homepage": "https://github.com/my-username/open-dataroom",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/my-username/open-dataroom.git"
+    },
+    "bugs": {
+        "url": "https://github.com/my-username/open-dataroom/issues"
+    },
+    "keywords": [
+        "investor-data-room",
+        "data-room",
+        "nextjs",
+        "rag",
+        "mongodb",
+        "gemini",
+        "openai",
+        "anthropic",
+        "vercel"
+    ],
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "setup": "tsx bin/setup.ts",
+        "check": "tsx bin/check.ts",
+        "example:acme-capital": "tsx bin/use-example.ts acme-capital",
+        "example:greenwood-holdings": "tsx bin/use-example.ts greenwood-holdings",
+        "example:lighthouse-labs": "tsx bin/use-example.ts lighthouse-labs"
+    },
+    "dependencies": {
+        "@ai-sdk/google": "^3.0.43",
+        "@anthropic-ai/sdk": "^0.40.0",
+        "@aws-sdk/client-s3": "^3.1011.0",
+        "@aws-sdk/s3-request-presigner": "^3.1011.0",
+        "@clack/prompts": "^1.4.0",
+        "@google/generative-ai": "^0.24.1",
+        "@tailwindcss/postcss": "^4.2.1",
+        "@tailwindcss/typography": "^0.5.19",
+        "ai": "^6.0.116",
+        "bcryptjs": "^3.0.3",
+        "exceljs": "^4.4.0",
+        "googleapis": "^171.4.0",
+        "jsonwebtoken": "^9.0.3",
+        "mongoose": "^9.3.1",
+        "next": "^16.1.7",
+        "next-themes": "^0.4.6",
+        "nodemailer": "^8.0.2",
+        "openai": "^4.86.1",
+        "pdfjs-dist": "^5.5.207",
+        "postcss": "^8.5.8",
+        "react": "^19.2.4",
+        "react-aria-components": "^1.16.0",
+        "react-dom": "^19.2.4",
+        "react-markdown": "^10.1.0",
+        "react-pdf": "^10.4.1",
+        "rehype-sanitize": "^6.0.0",
+        "sonner": "^2.0.7",
+        "tailwind-merge": "^3.5.0",
+        "tailwindcss": "^4.2.1",
+        "tailwindcss-animate": "^1.0.7",
+        "tailwindcss-react-aria-components": "^2.0.1",
+        "typescript": "^5.9.3",
+        "unpdf": "^1.4.0"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "@types/jsonwebtoken": "^9.0.10",
+        "@types/node": "^25.5.0",
+        "@types/nodemailer": "^7.0.11",
+        "@types/react": "^19.2.14",
+        "@types/react-dom": "^19.2.3",
+        "tsx": "^4.22.3"
+    }
+}

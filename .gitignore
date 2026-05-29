@@ -1,0 +1,37 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+.env.production
+
+# screenshot tooling — keep the render scripts + HTML templates, ignore the
+# rendered output (re-runnable any time via `node .screenshots/tour.mjs` or
+# `node .screenshots/render-og-all.mjs`).
+.screenshots/*.png
