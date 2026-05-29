@@ -1,0 +1,50 @@
+/*
+ * THE BRAND COLOUR RAMP — your single edit surface for the visual identity.
+ *
+ * Tailwind v4 generates `bg-brand-N` / `text-brand-N` utility classes from
+ * tokens defined inside an `@theme {}` directive. Defining them in `:root`
+ * alone sets CSS variables but does NOT generate the utility classes — the
+ * UI will silently render with no fill. Keep the @theme block here.
+ *
+ * Current palette: ACME CAPITAL — burnt orange + mustard, mid-century
+ * industrial catalogue. Replace the values below to re-skin the entire UI
+ * without touching any component.
+ *
+ * Derivation tools: uicolors.app, tailwind-color-generator.com.
+ */
+
+@theme {
+    /* Brand ramp — burnt orange (catalog primary) */
+    --color-brand-25:  rgb(254 251 246);
+    --color-brand-50:  rgb(255 247 237);
+    --color-brand-100: rgb(255 237 213);
+    --color-brand-200: rgb(254 215 170);
+    --color-brand-300: rgb(253 186 116);
+    --color-brand-400: rgb(251 146 60);
+    --color-brand-500: rgb(249 115 22);
+    --color-brand-600: rgb(234 88 12);
+    --color-brand-700: rgb(180 83  9);   /* #B45309 — the Acme orange */
+    --color-brand-800: rgb(154 52 18);
+    --color-brand-900: rgb(124 45 18);
+    --color-brand-950: rgb( 67 20  7);
+
+    /* Accent — mustard yellow, used sparingly for "Premium" tier + highlights */
+    --color-accent-25:  rgb(255 253 245);
+    --color-accent-50:  rgb(255 250 235);
+    --color-accent-100: rgb(254 240 199);
+    --color-accent-200: rgb(253 224 137);
+    --color-accent-300: rgb(254 200 75);
+    --color-accent-400: rgb(253 176 34);
+    --color-accent-500: rgb(245 158 11);  /* #F59E0B — the Acme mustard */
+    --color-accent-600: rgb(217 119 6);
+    --color-accent-700: rgb(180 83 9);
+    --color-accent-800: rgb(146 64 14);
+    --color-accent-900: rgb(120 53 15);
+
+    /* Paper — warm cream surfaces, evokes the industrial catalogue */
+    --color-paper-cream: rgb(250 247 240);   /* page background */
+    --color-paper-warm:  rgb(245 239 224);   /* slight contrast */
+    --color-paper-card:  rgb(255 253 248);   /* card surfaces */
+    --color-paper-ink:   rgb( 31  31  31);   /* near-black, "stamp ink" */
+    --color-paper-rule:  rgb(232 224 207);   /* hairline rules */
+}
