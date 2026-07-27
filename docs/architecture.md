@@ -52,7 +52,7 @@ open-dataroom/
 │   │   ├── s3.ts                 Optional S3 presign helper
 │   │   ├── llm/                  Pluggable provider adapters
 │   │   │   ├── types.ts          ChatProvider / EmbeddingsProvider contracts
-│   │   │   ├── gemini.ts         @google/generative-ai adapter
+│   │   │   ├── gemini.ts         @google/genai adapter
 │   │   │   ├── openai.ts         openai adapter
 │   │   │   ├── anthropic.ts      @anthropic-ai/sdk adapter (chat only)
 │   │   │   └── factory.ts        getChatProvider() / getEmbeddingsProvider()

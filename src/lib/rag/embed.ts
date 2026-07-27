@@ -6,7 +6,7 @@ import { getEmbeddingsProvider } from "../llm/factory";
  * vector-search wiring) go through here so flipping
  * `config.ai.embeddingsProvider` doesn't ripple through the codebase.
  *
- * Provider dimensions DIFFER (Gemini embedding-001 = 768d, OpenAI
+ * Provider dimensions DIFFER (Gemini text-embedding-005 = 768d, OpenAI
  * text-embedding-3-small = 1536d). Flipping providers without re-ingesting
  * yields incompatible vectors — the keyword scorer ignores embeddings
  * today so this is harmless until vector search ships, but document it.

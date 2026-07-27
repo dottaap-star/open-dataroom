@@ -184,7 +184,7 @@ async function main() {
         const embeddingsProvider = cfgText.match(/embeddingsProvider:\s*"([^"]+)"/)?.[1];
         if (chatProvider || embeddingsProvider) {
             console.log("API keys this example expects in .env.local:");
-            if (chatProvider === "gemini" || embeddingsProvider === "gemini")    console.log("  GEMINI_API_KEY");
+            if (chatProvider === "gemini" || embeddingsProvider === "gemini")    console.log("  GOOGLE_GEMINI_API_KEY");
             if (chatProvider === "openai" || embeddingsProvider === "openai")    console.log("  OPENAI_API_KEY");
             if (chatProvider === "anthropic")                                    console.log("  ANTHROPIC_API_KEY");
             console.log("");

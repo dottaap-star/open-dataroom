@@ -9,7 +9,7 @@ import { config as dataroomConfig } from "./dataroom.config";
 const CONNECT_SRC = [
     "'self'",
     "https://*.googleapis.com",                // Drive + Gemini
-    "https://generativelanguage.googleapis.com", // Gemini chat endpoint
+    "https://aiplatform.googleapis.com",       // Gemini chat endpoint
     "https://api.openai.com",                  // OpenAI
     "https://api.anthropic.com",               // Anthropic
 ].join(" ");

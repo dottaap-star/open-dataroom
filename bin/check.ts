@@ -176,11 +176,11 @@ async function checkChatProvider(cfg: typeof import("../dataroom.config").config
     const provider = cfg.ai.chatProvider;
     try {
         if (provider === "gemini") {
-            const key = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
-            if (!key) throw new Error("GEMINI_API_KEY not set");
-            const { GoogleGenerativeAI } = await import("@google/generative-ai");
-            const m = new GoogleGenerativeAI(key).getGenerativeModel({ model: "embedding-001" });
-            await m.embedContent("ping"); // cheapest sanity call
+            const key = process.env.GOOGLE_GEMINI_API_KEY || process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+            if (!key) throw new Error("GOOGLE_GEMINI_API_KEY not set");
+            const { GoogleGenAI } = await import("@google/genai");
+            const ai = new GoogleGenAI({ vertexai: true, apiKey: key });
+            await ai.models.embedContent({ model: "text-embedding-005", contents: "ping" }); // cheapest sanity call
         } else if (provider === "openai") {
             const key = process.env.OPENAI_API_KEY;
             if (!key) throw new Error("OPENAI_API_KEY not set");
@@ -217,11 +217,11 @@ async function checkEmbeddingsProvider(cfg: typeof import("../dataroom.config").
     }
     try {
         if (provider === "gemini") {
-            const key = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
-            if (!key) throw new Error("GEMINI_API_KEY not set");
-            const { GoogleGenerativeAI } = await import("@google/generative-ai");
-            const m = new GoogleGenerativeAI(key).getGenerativeModel({ model: "embedding-001" });
-            await m.embedContent("ping");
+            const key = process.env.GOOGLE_GEMINI_API_KEY || process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+            if (!key) throw new Error("GOOGLE_GEMINI_API_KEY not set");
+            const { GoogleGenAI } = await import("@google/genai");
+            const ai = new GoogleGenAI({ vertexai: true, apiKey: key });
+            await ai.models.embedContent({ model: "text-embedding-005", contents: "ping" });
         } else if (provider === "openai") {
             const key = process.env.OPENAI_API_KEY;
             if (!key) throw new Error("OPENAI_API_KEY not set");
