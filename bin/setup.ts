@@ -97,7 +97,7 @@ function writeEnv(map: Map<string, string>) {
         ["Email (Gmail SMTP)",     ["EMAIL_USER", "EMAIL_PASS"]],
         ["Google Drive",           ["GOOGLE_DRIVE_FOLDER_ID", "GOOGLE_SERVICE_ACCOUNT_EMAIL", "GOOGLE_SERVICE_ACCOUNT_KEY"]],
         ["AWS S3",                 ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_REGION", "S3_BUCKET_NAME", "CDN_URL"]],
-        ["AI providers",           ["GOOGLE_GEMINI_API_KEY", "OPENAI_API_KEY", "ANTHROPIC_API_KEY"]],
+        ["AI providers",           ["GEMINI_API_KEY", "OPENAI_API_KEY", "ANTHROPIC_API_KEY"]],
         ["Admin seed",             ["ADMIN_EMAIL", "ADMIN_PASSWORD"]],
         ["App",                    ["NEXT_PUBLIC_APP_URL", "CRON_SECRET"]],
     ];
@@ -124,7 +124,7 @@ function writeEnv(map: Map<string, string>) {
 // ============================================================
 
 const DEFAULT_MODELS = {
-    gemini:    { chat: "gemini-3.1-pro-preview",     embed: "text-embedding-005" },
+    gemini:    { chat: "gemini-3.1-pro-preview",     embed: "embedding-001" },
     openai:    { chat: "gpt-4o",                     embed: "text-embedding-3-small" },
     anthropic: { chat: "claude-sonnet-4-5",          embed: "" }, // forced to gemini or openai
 };
@@ -148,8 +148,8 @@ async function testMongo(uri: string): Promise<string | null> {
 async function testProviderKey(provider: "gemini" | "openai" | "anthropic", key: string, model?: string): Promise<string | null> {
     try {
         if (provider === "gemini") {
-            const { GoogleGenAI } = await import("@google/genai");
-            await new GoogleGenAI({ vertexai: true, apiKey: key }).models.embedContent({ model: "text-embedding-005", contents: "ping" });
+            const { GoogleGenerativeAI } = await import("@google/generative-ai");
+            await new GoogleGenerativeAI(key).getGenerativeModel({ model: "embedding-001" }).embedContent("ping");
         } else if (provider === "openai") {
             const OpenAI = (await import("openai")).default;
             await new OpenAI({ apiKey: key }).models.list();
@@ -239,7 +239,7 @@ async function main() {
     );
     const chatProvider = await promptSelect("Which provider matches your dataroom.config.ts chatProvider?", [
         { value: "openai",    label: "OpenAI",    hint: "Default for the shipped Acme example" },
-        { value: "gemini",    label: "Gemini",    hint: "Free tier ~30s setup at the GCP console (Vertex-bound key)" },
+        { value: "gemini",    label: "Gemini",    hint: "Free tier ~30s setup at aistudio.google.com" },
         { value: "anthropic", label: "Anthropic", hint: "Will also prompt for OpenAI/Gemini embeddings key" },
     ]) as "gemini" | "openai" | "anthropic";
 
@@ -268,7 +268,7 @@ async function main() {
         s.stop(`Key rejected: ${err}`);
         if (!await promptConfirm("Retry?", true)) bail("Chat provider key is required.");
     }
-    const envKeyName = chatProvider === "gemini" ? "GOOGLE_GEMINI_API_KEY" : chatProvider === "openai" ? "OPENAI_API_KEY" : "ANTHROPIC_API_KEY";
+    const envKeyName = chatProvider === "gemini" ? "GEMINI_API_KEY" : chatProvider === "openai" ? "OPENAI_API_KEY" : "ANTHROPIC_API_KEY";
     env.set(envKeyName, chatKey);
 
     if (chatProvider === "anthropic") {
@@ -283,7 +283,7 @@ async function main() {
             s.stop(`Key rejected: ${err}`);
             if (!await promptConfirm("Retry?", true)) bail("Embeddings key required when chat is Anthropic.");
         }
-        env.set(embeddingsProvider === "gemini" ? "GOOGLE_GEMINI_API_KEY" : "OPENAI_API_KEY", embKey);
+        env.set(embeddingsProvider === "gemini" ? "GEMINI_API_KEY" : "OPENAI_API_KEY", embKey);
     }
 
     // ---- Step 4: Google Drive (optional) ----

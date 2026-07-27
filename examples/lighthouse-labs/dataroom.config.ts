@@ -53,7 +53,7 @@ export const config: DataroomConfig = {
         chatProvider:        "gemini",
         chatModel:           "gemini-3.1-pro-preview",
         embeddingsProvider:  "gemini",
-        embeddingsModel:     "text-embedding-005",
+        embeddingsModel:     "embedding-001",
     },
 
     email: {

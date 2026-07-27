@@ -54,7 +54,7 @@ script-src  'self' 'unsafe-inline';                ← see note below
 style-src   'self' 'unsafe-inline';
 img-src     'self' data: https:;
 connect-src 'self' https://*.googleapis.com
-                   https://aiplatform.googleapis.com
+                   https://generativelanguage.googleapis.com
                    https://api.openai.com
                    https://api.anthropic.com;
 frame-src   'self' https://www.youtube.com https://www.youtube-nocookie.com;

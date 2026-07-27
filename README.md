@@ -163,7 +163,7 @@ Things the template intentionally does NOT include — see [CONTRIBUTING.md](CON
 - [Mongoose](https://mongoosejs.com/) on Mongo Atlas
 - [Tailwind v4](https://tailwindcss.com/) with CSS custom properties
 - [@clack/prompts](https://github.com/natemoo-re/clack) for the wizard
-- [@google/genai](https://www.npmjs.com/package/@google/genai), [openai](https://www.npmjs.com/package/openai), [@anthropic-ai/sdk](https://www.npmjs.com/package/@anthropic-ai/sdk) — all three, behind a unified adapter
+- [@google/generative-ai](https://www.npmjs.com/package/@google/generative-ai), [openai](https://www.npmjs.com/package/openai), [@anthropic-ai/sdk](https://www.npmjs.com/package/@anthropic-ai/sdk) — all three, behind a unified adapter
 - [unpdf](https://www.npmjs.com/package/unpdf) + [ExcelJS](https://www.npmjs.com/package/exceljs) for text extraction
 - [nodemailer](https://nodemailer.com/) for transactional email
 - [googleapis](https://www.npmjs.com/package/googleapis) for Drive sync
